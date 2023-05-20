@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>381</width>
+      <height>130</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Model</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="modelOption">
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <item>
+        <property name="text">
+         <string>Tiny</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Base</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Small</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Medium</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Large</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Language</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="languageOption">
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>Arabic</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>English</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Task</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="taskOption">
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>Transcribe</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Translate</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>460</y>
+      <width>401</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="selectfileButton">
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string>Select a audio file to be transcribed/translated</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #0078D7;
+  	color: #FFFFFF;
+  	border: 1px solid #0078D7;
+  	border-radius: 4px;
+  	padding: 8px;
+}
+
+QPushButton:hover {
+    background-color: #005499;
+  	color: #FFFFFF;
+  	border: 1px solid #005499;
+}
+
+QPushButton:pressed {
+   background-color: #00325A;
+   color: #FFFFFF;
+   border: 1px solid #00325A;
+}
+
+QPushButton:disabled {
+  background-color: #EAEAEA;
+  color: #8A8A8A;
+  border: 1px solid #EAEAEA;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Select File</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="startButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #0078D7;
+  	color: #FFFFFF;
+  	border: 1px solid #0078D7;
+  	border-radius: 4px;
+  	padding: 8px;
+}
+
+QPushButton:hover {
+    background-color: #005499;
+  	color: #FFFFFF;
+  	border: 1px solid #005499;
+}
+
+QPushButton:pressed {
+   background-color: #00325A;
+   color: #FFFFFF;
+   border: 1px solid #00325A;
+}
+
+QPushButton:disabled {
+  background-color: #EAEAEA;
+  color: #8A8A8A;
+  border: 1px solid #EAEAEA;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Start</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #0078D7;
+  	color: #FFFFFF;
+  	border: 1px solid #0078D7;
+  	border-radius: 4px;
+  	padding: 8px;
+}
+
+QPushButton:hover {
+    background-color: #005499;
+  	color: #FFFFFF;
+  	border: 1px solid #005499;
+}
+
+QPushButton:pressed {
+   background-color: #00325A;
+   color: #FFFFFF;
+   border: 1px solid #00325A;
+}
+
+QPushButton:disabled {
+  background-color: #EAEAEA;
+  color: #8A8A8A;
+  border: 1px solid #EAEAEA;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <family>Cascadia Code</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Output</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="outputBox">
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  padding: 8px;
+  font-family: Segoe UI, Arial, sans-serif;
+}
+
+QTextEdit:hover {
+  border-color: #0078D7;
+}
+
+QTextEdit:focus {
+  border-color: #0078D7;
+  outline: none;
+}
+
+QTextEdit:disabled {
+  background-color: #EAEAEA;
+  color: #8A8A8A;
+  border: 1px solid #EAEAEA;
+}
+</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>540</y>
+      <width>781</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="statusLabel">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  background-color: #F0F0F0;
+  color: #000000;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  padding: 8px;
+  font-family: Segoe UI, Arial, sans-serif;
+}
+
+QLabel:hover {
+  background-color: #EAEAEA;
+}
+
+QLabel:focus {
+  outline: none;
+}
+
+QLabel.success {
+  background-color: #DFF0D8;
+  border-color: #3C763D;
+  color: #3C763D;
+}
+
+QLabel.warning {
+  background-color: #FCF8E3;
+  border-color: #8A6D3B;
+  color: #8A6D3B;
+}
+
+QLabel.error {
+  background-color: #F2DEDE;
+  border-color: #A94442;
+  color: #A94442;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Status: </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="clearButton">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>410</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Clear output text</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #0078D7;
+  	color: #FFFFFF;
+  	border: 1px solid #0078D7;
+  	border-radius: 4px;
+  	padding: 8px;
+}
+
+QPushButton:hover {
+    background-color: #005499;
+  	color: #FFFFFF;
+  	border: 1px solid #005499;
+}
+
+QPushButton:pressed {
+   background-color: #00325A;
+   color: #FFFFFF;
+   border: 1px solid #00325A;
+}
+
+QPushButton:disabled {
+  background-color: #EAEAEA;
+  color: #8A8A8A;
+  border: 1px solid #EAEAEA;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
