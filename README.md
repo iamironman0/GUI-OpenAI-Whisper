@@ -12,6 +12,8 @@ Simple GUI app that transcribe audio files with OpenAI Wishper and PyQt5
 * Save result to a txt file
 * Clear output text
 
+* Using multiprocessing (QThread)
+
 ## Setup
 
 ### Requirements
